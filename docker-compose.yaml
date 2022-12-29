@@ -1,0 +1,41 @@
+version: "3.3"
+
+networks:
+  qtumd_regtest_network:
+
+services:
+  qtumd_node1:
+    image: qtum/qtum:latest
+    container_name: qtumd_node1
+    command: qtumd -addrindex=1 -deprecatedrpc=accounts -printtoconsole -datadir=/data -conf=/home/qtum/qtum.conf
+    volumes:
+      - ./node1/node1.conf:/home/qtum/qtum.conf:ro
+      - ./node1/data:/data
+    networks:
+      - qtumd_regtest_network
+    ports:
+      - 13881:13881
+
+  qtumd_node2:
+    image: qtum/qtum:latest
+    container_name: qtumd_node2
+    command: qtumd -addrindex=1 -deprecatedrpc=accounts -printtoconsole -datadir=/data -conf=/home/qtum/qtum.conf
+    volumes:
+      - ./node2/node2.conf:/home/qtum/qtum.conf:ro
+      - ./node2/data:/data
+    networks:
+      - qtumd_regtest_network
+    ports:
+      - 13882:13882
+
+  qtumd_node3:
+    image: qtum/qtum:latest
+    container_name: qtumd_node3
+    command: qtumd -addrindex=1 -deprecatedrpc=accounts -printtoconsole -datadir=/data -conf=/home/qtum/qtum.conf
+    volumes:
+      - ./node3/node3.conf:/home/qtum/qtum.conf:ro
+      - ./node3/data:/data
+    networks:
+      - qtumd_regtest_network
+    ports:
+      - 13883:13883

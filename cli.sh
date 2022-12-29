@@ -1,0 +1,3 @@
+alias q1='/Users/alejoacosta/code/qtum/qtum-22.1/bin/qtum-cli -rpcuser=qtum -rpcpassword=qtum -regtest -rpcport=13881 --rpcconnect=127.0.0.1'
+alias q2='/Users/alejoacosta/code/qtum/qtum-22.1/bin/qtum-cli -rpcuser=qtum -rpcpassword=qtum -regtest -rpcport=13882 --rpcconnect=127.0.0.1'
+alias q3='/Users/alejoacosta/code/qtum/qtum-22.1/bin/qtum-cli -rpcuser=qtum -rpcpassword=qtum -regtest -rpcport=13883 --rpcconnect=127.0.0.1'
